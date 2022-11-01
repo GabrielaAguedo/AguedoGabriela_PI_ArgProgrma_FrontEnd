@@ -1,0 +1,53 @@
+<section class="qualification section" id="app-hys">
+  <div class="row">
+    <h1 class="section__title">Hard & Soft Skills</h1>
+    <div class="" data-target='#education'>
+      <button type="button" routerLink="/newskill" *ngIf="isLogged" target="_blank" class="btn__icon">
+          <i class="uil uil-plus"></i>
+      </button>
+  
+      
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4 circulo" *ngFor="let skill of skill">
+      <div class="card" style="width: 18rem">
+        <circle-progress
+          [percent]="(skill.porcentaje)"
+          [radius]="70"
+          [title]="(skill.nombre)"          
+          [titleColor]="'#142680'"
+          [showTitle]="true"
+          [imageSrc]="''"
+          [showImage]="false"
+          [imageHeight]="50"
+          [imageWidth]="50"
+          [showUnits]="false"
+          [showSubtitle]="false"
+          [backgroundColor]="'white'"
+          [outerStrokeWidth]="12"
+          [innerStrokeWidth]="8"
+          [outerStrokeColor]="'#142680'"
+          [innerStrokeColor]="'#142680'"
+          [animation]="true"
+          [animationDuration]="300"
+        >
+        </circle-progress>
+        <div class="card-body">
+          <button *ngIf="isLogged" routerLink="/editskill/{{skill.id}}" class="button_icon">
+            <i class="uil uil-pen"></i>
+          </button>
+          <button *ngIf="isLogged" class="button_icon" (click)="delete(skill.id)">
+            <i class="uil uil-trash-alt"></i>
+          </button>
+          <!--<form *ngIf="mostrar" class="formEdit">
+            <h5>Añadir porcentaje</h5>
+            <b><p>Porcentaje</p></b><input type="number" min="1" max="100" class="inp"> <br>
+            <button (click)="onCreate()" class="buton_icon"><b>Guardar</b></button>
+          </form>-->
+        </div>
+      </div>
+      
+    </div>
+
+  </div>
+</section>
+

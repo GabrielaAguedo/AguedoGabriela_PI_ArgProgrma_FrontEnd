@@ -1,0 +1,58 @@
+.button_icon{
+  font-size: 1.4rem;
+  transition: .3s;
+  position: relative;
+  top: -40px;
+  left: 800px;
+  background-color: var(--first-color);
+  color: #fff;
+  border-radius: 40%;
+  border: 0;
+  height: 30px;
+  width: 30px;
+  align-items: center;
+  cursor: pointer;
+  padding: 0px 2px;
+}
+.buton_icon{
+  font-size: var(--font-medium);
+  transition: .3s;
+  top: -40px;
+  left: 150px;
+  background-color: var(--first-color);
+  color: #fff;
+  border-radius: 40%;
+  border: 0;
+  height: 30px;
+  width: 30px;
+  align-items: center;
+  cursor: pointer;
+  padding: 5px 2px;
+}
+
+th, h2{
+  
+  background-color: #142680;
+  color: white;
+  
+}
+
+
+td{
+  font-size:80%;
+  font-style: italic;
+  border-bottom: #142680 7px solid;
+ 
+}
+
+table {
+  margin-top: 10px;
+  border-collapse: collapse;
+  width: 130%;
+  margin-left: -15%;
+}
+
+
+h2, h4, h5 {
+  text-align: center;
+}

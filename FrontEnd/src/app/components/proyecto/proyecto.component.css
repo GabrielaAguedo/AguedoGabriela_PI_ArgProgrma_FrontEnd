@@ -1,0 +1,16 @@
+.button_icon{
+    font-size: 1.4rem;
+    transition: .3s;
+    position: relative;
+    top: -40px;
+    left: 800px;
+    background-color: var(--first-color);
+    color: #fff;
+    border-radius: 40%;
+    border: 0;
+    height: 30px;
+    width: 30px;
+    align-items: center;
+    cursor: pointer;
+    padding: 0px 2px;
+  }

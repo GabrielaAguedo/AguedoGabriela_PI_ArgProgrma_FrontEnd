@@ -1,0 +1,74 @@
+.card{
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.button_icon{
+    font-size: 1rem;
+    transition: .3s;
+    background-color: white;
+    color: var(--first-color);
+    border-radius: 40%;
+    border: 0;    
+    cursor: pointer;
+    padding: 2px;
+    margin-left: 10px;
+    margin-top: 20px;
+    width: 30px;
+    height: 30px;
+    box-shadow: 2px 2px 2px var(--first-color) ;
+}
+
+h5{
+    font-style: italic;
+}
+
+.formEdit{
+    margin-top: 20px;
+    align-items: center;
+}
+
+p{
+    margin-bottom: 0;
+}
+
+
+.inp{
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: solid 2px var(--first-color);
+    outline: none;
+}
+
+.buton_icon{
+    font-size: 1rem;
+    transition: .3s;
+    background-color: white;
+    color: var(--first-color);
+    border-radius: 10%;
+    border: 0;   
+    padding: 2px;
+    width: 70px;
+    height: 30px;
+    box-shadow: 2px 2px 2px var(--first-color) ;
+}
+
+.btn__icon {
+    font-size: 1.4rem;
+    transition: .3s;
+    position: relative;
+    top: -40px;
+    left: 865px;
+    background-color: var(--first-color);
+    color: #fff;
+    border-radius: 40%;
+    border: 0;
+    height: 30px;
+    width: 30px;
+    align-items: center;
+    cursor: pointer;
+    padding: 0px 2px;
+    
+}

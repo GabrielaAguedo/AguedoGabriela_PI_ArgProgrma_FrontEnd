@@ -1,0 +1,41 @@
+<section class="qualification section">
+    <h1 class="section__title"><i class="uil uil-graduation-cap qualification__icon"></i>
+        Experiencia Laboral</h1>
+    
+        <div class="" data-target='#education'>
+            <button type="button" routerLink="/nuevaexp" *ngIf="isLogged" target="_blank" class="button_icon">
+                <i class="uil uil-plus"></i>
+            </button>
+        
+            
+        </div>
+    <div class="qualification__container container">
+        <div class="qualification__sections">
+            <!--==================== QUALIFICATION content 1 ====================-->
+            <div class="qualification__content qualification__active" data-content id="education" >
+                <!--==================== QUALIFICATION 1 ====================-->
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <th><h2>Institución</h2></th>
+                            <th colspan="3"><h2>Tituto</h2></th>
+                        </tr>
+                        <tr *ngFor="let Experiencia of expe">
+                            <td>
+                                <h4>{{Experiencia.nombreE}}</h4>
+                            </td>
+                            <td>
+                                <h5>{{Experiencia.descripcionE}}</h5>
+                            </td>
+                            <td *ngIf="isLogged"><button class="buton_icon" routerLink="editexp/:id"><i class="uil uil-pen"></i></button></td>
+                            <td *ngIf="isLogged"><button class="buton_icon" (click)="delete(Experiencia.id)"><i class="uil uil-trash-alt"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            
+        </div>
+    </div>
+</section>

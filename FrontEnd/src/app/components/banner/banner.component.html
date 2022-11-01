@@ -1,0 +1,35 @@
+<section class="seccion-perfil-usuario">
+  <div class="perfil-usuario-header">
+    <div class="perfil-usuario-portada">
+      <img class="imgP" src="./../../../assets/img/bannermp.jpg" alt="img-portada"/>
+      <div class="perfil-usuario-avatar">
+        <img class="imgpUrl" src={{persona.imgPerfil}} alt="img-perfil"/>
+        <button type="button" class="boton-avatar" *ngIf="isLogged" routerLink="/editacercade/1">
+          <i class="uil uil-user"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="perfil-usuario-body">
+    <div class="perfil-usuario-bio">
+      <div class="datosP">
+        <h4>{{persona.nombre }} {{ persona.apellido}}</h4>
+        <h5>{{persona.profesion}}</h5>
+        <h6>{{persona.email}}</h6>
+      </div>    
+    <div class="redes-sociales">
+        <a href="https://ar.linkedin.com/"  target="_blank" class="btn__redes">
+            <i class="uil uil-linkedin"></i>
+        </a>
+        <a href="https://github.com/" target="_blank" class="btn__redes">
+            <i class="uil uil-github"></i>
+        </a>
+        <a href="https://www.instagram.com/" target="_blank" class="btn__redes">
+            <i class="uil uil-instagram"></i>
+        </a>
+    </div>
+    </div>
+  </div>
+</section>
+
+

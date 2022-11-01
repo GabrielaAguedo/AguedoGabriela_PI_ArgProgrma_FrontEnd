@@ -1,0 +1,59 @@
+<section class="portfolio section" id="app-proyecto">
+  <h2 class="section__title">Proyectos</h2>
+  <button type="button" routerLink="/newProyecto" *ngIf="isLogged" target="_blank" class="button_icon">
+    <i class="uil uil-plus"></i>
+  </button>
+  <span class="section__subtitle">Trabajos mas Recientes</span>
+  <div id="carouselExampleControls" class="carousel slide portfolio__container container swiper-container" data-bs-ride="carousel">
+    <div class="carousel-inner swiper-wrapper">
+      <div class="carousel-item active">
+        <!--==================== PORTFOLIO 1====================-->
+        <div class="portfolio__content grid swiper-slide" *ngFor="let Proyecto of proyecto">
+          <img src={{Proyecto.imgP}} alt="" class="portfolio__img">
+
+          <div class="portfolio__data">
+              <h3 class="portfolio__title">{{Proyecto.nombreP}}</h3>
+              <p class="portfolio__description">{{Proyecto.descripcionP}}</p>
+              <button *ngIf="isLogged"  class="button_icon" routerLink="/editProyec/{{Proyecto.id}}">
+                <i class="uil uil-pen"></i>
+              </button>
+              <button *ngIf="isLogged" class="button_icon" (click)="delete(Proyecto.id)">
+                <i class="uil uil-trash-alt"></i>
+              </button>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    <!--Add Arrows -->
+    <div class="swiper-button-next">
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
+      </button>
+    </div>
+    <div class="swiper-button-prev">
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
+      </button>
+    </div>
+  </div>
+</section>
+  <!--==================== PROJECT IN MIND ====================-->
+  <section class="project section" id="contactame">
+    <div class="project__bg">
+      <div class="project__container container grid">
+        <div class="project__data">
+          <h2 class="project__title">Tienes un nuevo proyecto</h2>
+          <p class="project__description">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+          </p>
+          <a href="#contact" class="button button--flex button--white">
+            Contact me
+            <i class="uil uil-message project__icon button__icon"></i>
+          </a>
+        </div>
+
+        <img src={{persona.imgPerfil}} alt="" class="project__img" />
+      </div>
+    </div>
+  </section>

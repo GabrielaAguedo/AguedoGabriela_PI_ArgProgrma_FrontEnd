@@ -1,0 +1,40 @@
+<div class="conten" *ngIf="persona">
+    <div class="form__perfil row">
+      <form class="form_p" (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+        <div class="inpu col-md-6">
+          <label for="nombre"  class="form-label"><b>Nombre</b></label>
+          <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="persona.nombre" required>
+        </div>
+        <div class="inpu col-md-6">
+          <label for="apellido" class="form-label"><b>Apellido</b></label>
+          <input type="text" class="form-control" id="apellido" name="apellido" [(ngModel)]="persona.apellido" required>
+        </div>
+        <div class="inpu col-md-6">
+          <label for="email" class="form-label"><b>Email</b></label>
+          <input type="email" class="form-control" id="email" placeholder="1234@asd.com" name="email" [(ngModel)]="persona.email" required>
+        </div>
+        <div class="inpu col-md-6">
+          <label for="profesion" class="form-label"><b>Profesión</b></label>
+          <input type="text" class="form-control" id="profesion" name="profesion" [(ngModel)]="persona.profesion" required>
+        </div>
+        <div class="inputIM col-md-12">
+          <label for="imgPer" class="form-label"><b>IMG Perfil</b></label>
+          <input type="file" class="form-control" id="imgPer" name="imgPer" [(ngModel)]="persona.imgPerfil" (change)="uploadImage($event)" accept=".jpg, .jpeg, .png">
+        </div>
+        <div class="inpuA col-md-12">
+          <img [src]="imageService.url" width="200px">
+        </div>
+        <div class="inpuA col-md-12">
+            <label for="acercaD"  class="form-label"><b>Acerca de mí</b></label> <br>
+            <textarea name="acercaD" class="textArea" id="acercaD" cols="111%" rows="5%" [(ngModel)]="persona.descripcion" required></textarea>
+        </div>
+        <div class="boton col-12">
+          <button type="submit" class="btn btn-primary">Guardar</button>
+        </div>
+      </form>
+      
+    </div>
+  </div>
+
+
+  
